@@ -1,10 +1,9 @@
 "use client";
+
 import {ComponentOne} from "@/app/components/componentOne";
 import {Authenticator, Flex, Heading, useTheme, View} from "@aws-amplify/ui-react";
 import {Footer, Logo, Stories} from "../../../ui-components";
-import "../reset.css"
-import '@fontsource/inter'
-import './styles.css';
+
 function Post() {
 
     const authComponents = {
@@ -27,9 +26,11 @@ function Post() {
         <Authenticator  components={authComponents} hideSignUp={true}>
             {({ signOut, user }) => (
                 <ComponentOne
+                    // @ts-ignore
                     handleClick={() => signOut()}
                     authText="Sign Out"
-                    username={user.attributes.email.split("@")[0]}
+                    // @ts-ignore
+                    username={user?.attributes.email.split("@")[0]}
                 >
                     <View marginTop="50px" marginBottom="30px"> <Heading level={2}>Welcome to our backstage</Heading>
                         <p>Text Text Text TextText Text</p>

@@ -11,7 +11,7 @@ export const Main = () => {
         <View marginBottom="135px"> <Hero handleClick={() => {
         }}/> </View>
 
-        <View> <Grid> <Testimonies style={{display:"grid"}} /></Grid> </View>
+        <View> <Grid> <Testimonies style={{display: "grid"}}/></Grid> </View>
 
         <Flex justifyContent="center"> <Persuade
             banner="https://www.shutterstock.com/shutterstock/photos/2318800313/display_1500/stock-photo-paris-france-june-elon-musk-founder-ceo-and-chief-engineer-of-spacex-ceo-of-tesla-2318800313.jpg"></Persuade>
